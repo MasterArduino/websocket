@@ -5,8 +5,8 @@ import com.consumer.consumersocket.domain.UserAudit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserAuditRepository extends JpaRepository<UserAudit, Long> {
-
-    List<UserAudit> findByUserId(String userId);
+    Optional<UserAudit> findByUserId(String userId);
 }
