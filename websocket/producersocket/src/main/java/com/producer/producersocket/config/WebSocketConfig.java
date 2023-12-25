@@ -17,8 +17,7 @@ import org.slf4j.LoggerFactory;
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     private static final Logger logger = LoggerFactory.getLogger(WebSocketConfig.class);
 
-    @Autowired
-    private MyTextWebSocketHandler myTextWebSocketHandler;
+
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {

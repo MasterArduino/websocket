@@ -28,7 +28,7 @@ public class ConsumerController {
     @SendToUser("/topic/messages")
     public void processMessageFromProducer(@Payload MessageDto messageDto, Principal principal) {
         UserAudit userAudit = new UserAudit();
-        userAudit.setUserId(messageDto.getUserId()); // Извлекаем userId из сообщения
+        userAudit.setUserId(messageDto.getUserId());
         userAudit.setIsActive(messageDto.isActive());
         userAudit.setColor(messageDto.getColor());
         userAudit.setNumber(messageDto.getNumber());
